@@ -220,7 +220,7 @@ export default function HomePage() {
               className="group relative overflow-hidden gradient-primary text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-primary-500/30 hover:-translate-y-1"
             >
               <span className="relative z-10 flex items-center justify-center">
-                Gabung Daftar Tunggu
+                Mulai Sekarang - Gratis
                 <svg
                   className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
                   fill="none"
@@ -236,12 +236,6 @@ export default function HomePage() {
                 </svg>
               </span>
               <div className="absolute inset-0 bg-white/10 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-            </Link>
-            <Link
-              to="/produk/tms"
-              className="group glass-light text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:bg-white/20 hover:-translate-y-1"
-            >
-              Pelajari Lebih Lanjut
             </Link>
           </div>
 

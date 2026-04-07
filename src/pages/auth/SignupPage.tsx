@@ -8,7 +8,7 @@ export default function SignupPage() {
     fullName: "",
     email: "",
     phone: "",
-    product: "" as "tms" | "wms" | "",
+    address: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -33,9 +33,6 @@ export default function SignupPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleProductSelect = (product: "tms" | "wms") => {
-    setFormData({ ...formData, product });
-  };
 
   return (
     <>
@@ -43,7 +40,7 @@ export default function SignupPage() {
         <title>Daftar | Onward Connect</title>
         <meta
           name="description"
-          content="Daftar untuk mencoba Onward TMS atau Onward WMS"
+          content="Daftar untuk akses penuh ke Onward TMS dan WMS - Solusi logistik terpadu"
         />
       </Helmet>
 
@@ -78,7 +75,7 @@ export default function SignupPage() {
                 Buat Akun Perusahaan
               </h1>
               <p className="text-lg text-surface-400">
-                Pilih produk logistik Anda dan mulai transformasi rantai pasok
+                Dapatkan akses penuh ke TMS dan WMS untuk transformasi rantai pasok
                 cerdas.
               </p>
             </div>
@@ -194,102 +191,30 @@ export default function SignupPage() {
                   </div>
                 </div>
 
-                {/* Product Selection */}
+                {/* Address Field */}
                 <div className="pt-2">
-                  <label className="block text-sm font-semibold text-surface-300 mb-3">
-                    Pilih Produk Trial{" "}
-                    <span className="text-accent-400">*</span>
+                  <label
+                    htmlFor="address"
+                    className="block text-sm font-semibold text-surface-300 mb-2"
+                  >
+                    Alamat Perusahaan <span className="text-accent-400">*</span>
                   </label>
-                  <div className="grid grid-cols-2 gap-4">
-                    <button
-                      type="button"
-                      onClick={() => handleProductSelect("tms")}
-                      className={`p-4 sm:p-5 text-left rounded-xl border-2 transition-all duration-300 group ${
-                        formData.product === "tms"
-                          ? "border-primary-500 bg-primary-500/10"
-                          : "border-surface-800 bg-surface-900/50 hover:border-primary-500/50 hover:bg-surface-800"
-                      }`}
-                    >
-                      <div className="flex items-center">
-                        <div
-                          className={`w-10 h-10 rounded-lg flex items-center justify-center mr-3 transition-colors ${
-                            formData.product === "tms"
-                              ? "bg-primary-500/20"
-                              : "bg-surface-800 group-hover:bg-primary-500/15"
-                          }`}
-                        >
-                          <svg
-                            className="w-5 h-5 text-primary-400"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth={1.5}
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
-                            />
-                          </svg>
-                        </div>
-                        <div>
-                          <p className="font-bold text-sm text-white font-display">
-                            Onward TMS
-                          </p>
-                          <p className="text-xs text-surface-500 hidden sm:block">
-                            Transportasi
-                          </p>
-                        </div>
-                      </div>
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleProductSelect("wms")}
-                      className={`p-4 sm:p-5 text-left rounded-xl border-2 transition-all duration-300 group ${
-                        formData.product === "wms"
-                          ? "border-accent-500 bg-accent-500/10"
-                          : "border-surface-800 bg-surface-900/50 hover:border-accent-500/50 hover:bg-surface-800"
-                      }`}
-                    >
-                      <div className="flex items-center">
-                        <div
-                          className={`w-10 h-10 rounded-lg flex items-center justify-center mr-3 transition-colors ${
-                            formData.product === "wms"
-                              ? "bg-accent-500/20"
-                              : "bg-surface-800 group-hover:bg-accent-500/15"
-                          }`}
-                        >
-                          <svg
-                            className="w-5 h-5 text-accent-400"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth={1.5}
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 0h.008v.008h-.008V7.5zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"
-                            />
-                          </svg>
-                        </div>
-                        <div>
-                          <p className="font-bold text-sm text-white font-display">
-                            Onward WMS
-                          </p>
-                          <p className="text-xs text-surface-500 hidden sm:block">
-                            Pergudangan
-                          </p>
-                        </div>
-                      </div>
-                    </button>
-                  </div>
+                  <textarea
+                    id="address"
+                    name="address"
+                    required
+                    value={formData.address}
+                    onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+                    placeholder="Jl. Sudirman No. 123, Jakarta Selatan, DKI Jakarta 12190"
+                    rows={3}
+                    className="w-full bg-surface-900 border-2 border-surface-800 rounded-xl px-5 py-3.5 text-white placeholder:text-surface-600 focus:outline-none focus:ring-4 focus:ring-primary-500/20 focus:border-primary-500 transition-all font-medium resize-none"
+                  />
                 </div>
 
                 <div className="pt-4">
                   <button
                     type="submit"
-                    disabled={!formData.product || loading}
+                    disabled={loading}
                     className="w-full gradient-primary text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary-500/25 hover:shadow-primary-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none group relative overflow-hidden"
                   >
                     {loading ? (

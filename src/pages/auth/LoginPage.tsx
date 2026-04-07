@@ -45,9 +45,9 @@ export default function LoginPage() {
     dispatch({ type: "auth/setSelectedSystem", payload: system });
 
     if (system === "tms") {
-      window.location.href = "https://tms.onwardconnect.id/login";
+      window.location.href = "https://tms.onward.co.id/login";
     } else {
-      window.location.href = "https://wms.onwardconnect.id/login";
+      window.location.href = "https://wms.onward.co.id/login";
     }
   };
 
@@ -124,20 +124,12 @@ export default function LoginPage() {
                   </div>
 
                   <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <label
-                        className="block text-sm font-semibold text-surface-300"
-                        htmlFor="password"
-                      >
-                        Password
-                      </label>
-                      <a
-                        href="#"
-                        className="text-sm font-semibold text-primary-400 hover:text-primary-300 transition-colors"
-                      >
-                        Lupa Password?
-                      </a>
-                    </div>
+                    <label
+                      className="block text-sm font-semibold text-surface-300 mb-2"
+                      htmlFor="password"
+                    >
+                      Password
+                    </label>
                     <input
                       type="password"
                       id="password"
