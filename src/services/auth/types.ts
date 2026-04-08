@@ -1,4 +1,4 @@
-import type { Company, User, UserGroup } from '../types';
+import type { User } from "../types";
 
 /**
  * Session data structure that matches Redux auth state
@@ -13,7 +13,7 @@ export interface SessionData {
   /** WMS specific JWT token */
   wms_token?: string;
   /** Selected system after login */
-  selected_system?: 'tms' | 'wms' | null;
+  selected_system?: "tms" | "wms" | null;
 }
 
 export interface SSOEnvironment {

@@ -11,7 +11,7 @@ const rawBaseQuery = fetchBaseQuery({
   baseUrl: import.meta.env.VITE_API_URL,
   prepareHeaders: (headers, { getState }) => {
     const state = getState() as RootState;
-    const token = state?.auth?.session?.access_token;
+    const token = state?.auth?.session?.tms_token;
 
     headers.set("Accept", "application/json");
     headers.set("Content-Type", "application/json");
@@ -72,7 +72,11 @@ export const baseQuery: BaseQueryFn<
   }
 
   // Handle network errors
-  if (result.error && "status" in result.error && result.error.status === "FETCH_ERROR") {
+  if (
+    result.error &&
+    "status" in result.error &&
+    result.error.status === "FETCH_ERROR"
+  ) {
     logger.error("Network error occurred", result.error);
   }
 
