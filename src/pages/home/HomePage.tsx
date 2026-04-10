@@ -247,7 +247,7 @@ export default function HomePage() {
             {[
               { value: "2", label: "Produk Utama" },
               { value: "100%", label: "Terintegrasi Penuh" },
-              { value: "24/7", label: "Monitoring Real-time" },
+              { value: "24/7", label: "Pantau 24 Jam Nonstop" },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold font-display text-white">
@@ -280,7 +280,7 @@ export default function HomePage() {
             <p className="scroll-animate stagger-2 text-lg text-surface-300 leading-relaxed mb-10 max-w-xl">
               Connect adalah platform terpadu yang membantu perusahaan logistik
               mengelola seluruh operasional dalam satu ekosistem. Mulai dari
-              visibilitas gudang, optimalisasi rute, pengelolaan armada, hingga
+              pantauan gudang, optimalisasi rute, pengelolaan armada, hingga
               kepuasan pelanggan akhir.
             </p>
 
@@ -288,15 +288,15 @@ export default function HomePage() {
               {[
                 {
                   icon: <CubeIcon className="w-6 h-6" />,
-                  title: "Manajemen Inventori & Gudang",
+                  title: "Kelola Stok & Gudang",
                 },
                 {
                   icon: <TruckIcon className="w-6 h-6" />,
-                  title: "Pengaturan & Pelacakan Armada",
+                  title: "Atur & Pantau Armada",
                 },
                 {
                   icon: <MapPinIcon className="w-6 h-6" />,
-                  title: "Optimasi Rute Pengiriman",
+                  title: "Pengaturan Rute Pengiriman",
                 },
                 {
                   icon: <ChartIcon className="w-6 h-6" />,
@@ -365,7 +365,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* TMS Card */}
             <Link
-              to="/produk/tms"
+              to="/transportasi"
               className="scroll-animate stagger-3 group flex flex-col glass rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:shadow-primary-500/20 transition-all duration-500 border border-surface-700"
             >
               {/* Image Header */}
@@ -407,9 +407,9 @@ export default function HomePage() {
                 <div className="mt-auto">
                   <ul className="space-y-3 mb-6">
                     {[
-                      "Unlimited User & Order",
-                      "Live Tracking Armada",
-                      "Driver & Trip Management",
+                      "Pengguna & Order Tanpa Batas",
+                      "Pantau Armada Langsung",
+                      "Kelola Driver & Perjalanan",
                     ].map((feature, i) => (
                       <li
                         key={i}
@@ -442,7 +442,7 @@ export default function HomePage() {
 
             {/* WMS Card */}
             <Link
-              to="/produk/wms"
+              to="/gudang"
               className="scroll-animate stagger-4 group flex flex-col glass rounded-[2.5rem] overflow-hidden hover:shadow-2xl hover:shadow-accent-500/20 transition-all duration-500 border border-surface-700"
             >
               {/* Image Header */}
@@ -472,9 +472,9 @@ export default function HomePage() {
               {/* Content */}
               <div className="p-8 grow flex flex-col">
                 <p className="text-surface-300 text-lg mb-8 leading-relaxed">
-                  Sistem cerdas untuk mengelola stok inventori, memproses
-                  penerimaan barang, dan mengotomatisasi proses picking &
-                  packing.
+                  Sistem cerdas untuk mengelola stok barang, memproses
+                  penerimaan barang, dan mengotomatisasi proses pengambilan &
+                  pengepakan barang.
                 </p>
                 <div className="mt-auto">
                   <span className="inline-flex items-center text-accent-400 font-bold group-hover:text-accent-300 transition-colors text-lg">

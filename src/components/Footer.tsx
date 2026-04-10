@@ -63,7 +63,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/produk/tms"
+                  to="/transportasi"
                   className="text-surface-400 hover:text-primary-400 transition-colors duration-300 text-sm flex items-center group"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary-500/50 mr-3 group-hover:bg-primary-400 transition-colors" />
@@ -72,7 +72,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/produk/wms"
+                  to="/gudang"
                   className="text-surface-400 hover:text-primary-400 transition-colors duration-300 text-sm flex items-center group"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary-500/50 mr-3 group-hover:bg-primary-400 transition-colors" />

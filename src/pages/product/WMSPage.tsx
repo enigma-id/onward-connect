@@ -336,17 +336,17 @@ function useCounter(end: number, duration = 2000) {
 
 /* ─── Data ─── */
 const stats = [
-  { value: 99.9, suffix: "%", label: "Akurasi Inventori" },
-  { value: 3, suffix: "x", label: "Lebih Cepat Picking" },
-  { value: 40, suffix: "%", label: "Reduksi Biaya Operasional" },
-  { value: 24, suffix: "/7", label: "Monitoring Real-Time" },
+  { value: 99.9, suffix: "%", label: "Akurasi Stok" },
+  { value: 3, suffix: "x", label: "Lebih Cepat Ambil Barang" },
+  { value: 40, suffix: "%", label: "Hemat Biaya Operasional" },
+  { value: 24, suffix: "/7", label: "Pantau Langsung" },
 ];
 
 const features = [
   {
     id: "layout",
     icon: <LayoutIcon className="w-7 h-7" />,
-    title: "Custom Layout Designer",
+    title: "Desain Tata Letak Gudang",
     headline: "Desain Gudang Digital Anda",
     description:
       "Buat replika digital gudang dengan alat drag-and-drop intuitif. Visualisasikan kapasitas, optimalkan alur barang, dan rencanakan ekspansi — semuanya dari satu layar.",
@@ -361,10 +361,10 @@ const features = [
   {
     id: "analytics",
     icon: <BarChartIcon className="w-7 h-7" />,
-    title: "Real-time Analytics Suite",
+    title: "Analisis Langsung",
     headline: "Data yang Menggerakkan Keputusan",
     description:
-      "Jangan tebak — ketahui pasti. Dashboard analitik real-time mengungkap bottleneck tersembunyi, mengukur kecepatan tim, dan membantu Anda ambil keputusan 10x lebih cepat.",
+      "Jangan tebak — ketahui pasti. Dashboard analitik langsung mengungkap bottleneck tersembunyi, mengukur kecepatan tim, dan membantu Anda ambil keputusan 10x lebih cepat.",
     bullets: [
       "Dashboard kesehatan gudang",
       "Deteksi bottleneck otomatis",
@@ -376,10 +376,10 @@ const features = [
   {
     id: "mobile",
     icon: <SmartphoneIcon className="w-7 h-7" />,
-    title: "Worker Companion App",
+    title: "Aplikasi Mobile Tim Gudang",
     headline: "Produktivitas di Genggaman",
     description:
-      "Tingkatkan efisiensi tenaga kerja dengan PWA mobile-first yang bekerja di semua perangkat — bahkan offline. Picking, packing, dan scan barcode jadi lebih cepat.",
+      "Tingkatkan efisiensi tenaga kerja dengan PWA mobile-first yang bekerja di semua perangkat — bahkan offline. Pengambilan barang, pengepakan, dan scan barcode jadi lebih cepat.",
     bullets: [
       "Berjalan di smartphone/tablet apa pun",
       "Mode offline untuk area tanpa sinyal",
@@ -393,33 +393,33 @@ const features = [
 const benefits = [
   {
     icon: <PackageIcon className="w-7 h-7" />,
-    title: "Presisi Inventori",
-    desc: "Pelacakan real-time hingga level bin untuk menghilangkan kehilangan stok.",
+    title: "Presisi Stok",
+    desc: "Pantauan langsung hingga level rak/tempat untuk menghilangkan kehilangan stok.",
   },
   {
     icon: <ScanIcon className="w-7 h-7" />,
-    title: "Picking Tanpa Error",
+    title: "Ambil Barang Tanpa Error",
     desc: "Validasi barcode menjamin 100% akurasi pesanan.",
   },
   {
     icon: <ClockIcon className="w-7 h-7" />,
-    title: "Pengelolaan Tenggat",
-    desc: "Peringatan SLA otomatis menjaga setiap pengiriman sesuai jadwal.",
+    title: "Atur Janji Layanan",
+    desc: "Peringatan janji layanan otomatis menjaga setiap pengiriman sesuai jadwal.",
   },
   {
     icon: <EyeIcon className="w-7 h-7" />,
-    title: "Visibilitas Total",
-    desc: "Pantau setiap pergerakan inventori di fasilitas Anda secara instan.",
+    title: "Pantauan Total",
+    desc: "Pantau setiap pergerakan stok di fasilitas Anda secara seketika.",
   },
   {
     icon: <TrendIcon className="w-7 h-7" />,
-    title: "Skalabilitas Cepat",
-    desc: "Tambah pengguna dan lokasi tanpa downtime.",
+    title: "Bisa Berkembang Cepat",
+    desc: "Tambah pengguna dan lokasi tanpa gangguan.",
   },
   {
     icon: <ShieldIcon className="w-7 h-7" />,
-    title: "Keamanan Enterprise",
-    desc: "Enkripsi end-to-end dan backup otomatis harian.",
+    title: "Keamanan Terjamin",
+    desc: "Enkripsi penuh dan cadangan otomatis harian.",
   },
   {
     icon: <BoltIcon className="w-7 h-7" />,
@@ -428,31 +428,27 @@ const benefits = [
   },
   {
     icon: <CubeIcon className="w-7 h-7" />,
-    title: "Multi-Gudang",
-    desc: "Kelola banyak lokasi dari satu dashboard terpusat.",
+    title: "Banyak Gudang",
+    desc: "Kelola banyak lokasi dari satu tampilan terpusat.",
   },
 ];
 
 const faqs = [
   {
     q: "Apa itu Onward WMS?",
-    a: "Onward WMS adalah Sistem Manajemen Gudang komprehensif yang dirancang untuk menyederhanakan operasional, meningkatkan akurasi inventori, dan meningkatkan produktivitas tenaga kerja melalui pelacakan real-time dan otomatisasi cerdas.",
+    a: "Onward WMS adalah Sistem Manajemen Gudang yang dirancang untuk menyederhanakan operasional, meningkatkan akurasi stok, dan meningkatkan produktivitas tenaga kerja melalui pantauan langsung dan otomatisasi cerdas.",
   },
   {
     q: "Apakah data saya aman dan tersimpan cadangan?",
-    a: "Ya, kami menggunakan enkripsi tingkat enterprise dan melakukan cadangan otomatis harian untuk memastikan kelangsungan bisnis Anda. Data Anda disimpan di pusat data yang aman dan redundan.",
+    a: "Ya, kami menggunakan enkripsi tingkat perusahaan dan melakukan cadangan otomatis harian untuk memastikan kelangsungan bisnis Anda. Data Anda disimpan di pusat data yang aman dan cadangan.",
   },
   {
     q: "Apakah platform dapat diakses melalui mobile?",
-    a: "Tentu saja. Aplikasi Companion kami adalah Progressive Web App (PWA) yang bekerja di smartphone atau tablet apa pun, memungkinkan tenaga kerja Anda mengelola tugas dari mana saja di gudang.",
-  },
-  {
-    q: "Apakah saya dapat melakukan upgrade dengan mudah saat berkembang?",
-    a: "Ya, platform kami dibangun untuk pertumbuhan. Anda dapat dengan mudah meningkatkan paket, menambah pengguna, dan memperluas ke beberapa lokasi gudang tanpa downtime sistem.",
+    a: "Tentu saja. Aplikasi Companion kami adalah aplikasi mobile yang bekerja di smartphone atau tablet apa pun, memungkinkan tenaga kerja Anda mengelola tugas dari mana saja di gudang.",
   },
   {
     q: "Apakah saya memerlukan perangkat keras khusus?",
-    a: "Tidak diperlukan perangkat keras proprietary khusus. Sistem kami bekerja dengan barcode scanner standar, smartphone, dan tablet, mengurangi biaya investasi awal Anda.",
+    a: "Tidak diperlukan perangkat keras khusus. Sistem kami bekerja dengan barcode scanner standar, smartphone, dan tablet, mengurangi biaya investasi awal Anda.",
   },
 ];
 
@@ -546,11 +542,54 @@ export default function WMSPage() {
   return (
     <>
       <Helmet>
-        <title>Onward WMS | Sistem Manajemen Gudang</title>
+        <title>Onward WMS - Sistem Manajemen Gudang Terbaik | #1 di Indonesia</title>
         <meta
           name="description"
-          content="Optimalkan operasional gudang dengan sistem manajemen gudang Onward WMS. Capai akurasi inventori 99% dan visibilitas real-time."
+          content="Onward WMS - Sistem manajemen gudang dari Onward untuk optimalkan operasional, capai akurasi inventori 99%, dan visibilitas real-time. Solusi gudang #1 di Indonesia."
         />
+        <meta name="keywords" content="Onward, Onward WMS, sistem manajemen gudang, WMS Indonesia, software gudang, inventory management, akurasi stok, warehouse management system, operasional gudang, tracking inventori" />
+        <meta name="author" content="Onward" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://onward.id/gudang" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://onward.id/gudang" />
+        <meta property="og:title" content="Onward WMS - Sistem Manajemen Gudang Terbaik di Indonesia" />
+        <meta property="og:description" content="Optimalkan operasional gudang dengan Onward WMS. Capai akurasi inventori 99% dan visibilitas real-time." />
+        <meta property="og:image" content="https://onward.id/images/wms-og-image.jpg" />
+        <meta property="og:site_name" content="Onward" />
+        <meta property="og:locale" content="id_ID" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://onward.id/gudang" />
+        <meta name="twitter:title" content="Onward WMS - Sistem Manajemen Gudang Terbaik" />
+        <meta name="twitter:description" content="Optimalkan operasional gudang dengan Onward WMS. Capai akurasi inventori 99% dan visibilitas real-time." />
+        <meta name="twitter:image" content="https://onward.id/images/wms-twitter-image.jpg" />
+
+        {/* Schema.org structured data */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "Onward WMS",
+              "applicationCategory": "BusinessApplication",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "350"
+              },
+              "author": {
+                "@type": "Organization",
+                "name": "Onward"
+              },
+              "description": "Sistem manajemen gudang untuk optimalkan operasional, capai akurasi inventori 99%, dan visibilitas real-time.",
+              "keywords": "Onward WMS, warehouse management system, sistem gudang, inventory management Indonesia"
+            }
+          `}
+        </script>
       </Helmet>
 
       <div>

@@ -47,8 +47,8 @@ export default function Navbar() {
 
   const navLinks = [
     { to: '/', label: 'Beranda' },
-    { to: '/produk/tms', label: 'TMS' },
-    { to: '/produk/wms', label: 'WMS' },
+    { to: '/transportasi', label: 'Transportasi (TMS)' },
+    { to: '/gudang', label: 'Gudang (WMS)' },
   ]
 
   const isActive = (path: string) => location.pathname === path

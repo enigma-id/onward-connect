@@ -1,121 +1,90 @@
-# Home Page Content — Enigma Connect
+# Home Page Content — Onward Connect
 
 ## Hero Section
 
 **Headline**
-Connect – Platform Operasional Logistik
+Kelola Logistik Lebih Cerdas
 
 **Subtext**
-Kelola gudang, armada, dan pengiriman dalam satu sistem yang mudah digunakan. Connect membantu perusahaan logistik menjalankan operasional lebih rapi, lebih cepat, dan lebih terkontrol.
+Gudang, armada, dan pengiriman — dalam satu sistem yang mudah digunakan. Connect membantu perusahaan logistik menjalankan operasional lebih rapi, lebih cepat, dan lebih terkontrol.
 
-**CTA**
+**CTA Buttons**
+- Mulai Sekarang - Gratis (Primary)
 
-* Gabung ke Daftar Tunggu
-* Pelajari Lebih Lanjut
-
----
-
-# Apa itu Connect?
-
-Connect adalah platform yang membantu perusahaan logistik mengelola seluruh operasional dalam satu sistem.
-
-Mulai dari pengelolaan gudang, pengaturan armada kendaraan, hingga pemantauan pengiriman ke pelanggan. Semua proses dapat dipantau dengan lebih mudah dan lebih terorganisir.
-
-### Yang Bisa Anda Lakukan dengan Connect
-
-* 📦 Kelola stok dan aktivitas gudang dengan lebih rapi
-* 🚚 Atur armada kendaraan dan jadwal pengiriman
-* 📍 Pantau status pengiriman dengan mudah
-* 📊 Lihat laporan operasional secara lebih jelas
+**Stats Row**
+- 2 Produk Utama
+- 100% Terintegrasi Penuh
+- Pantau 24 Jam Nonstop
 
 ---
 
-# Visi & Misi
+## Apa itu Connect?
 
-## Visi
+**Section Title**
+Tentang Platform
 
-Membantu perusahaan logistik di Indonesia menjalankan operasional yang lebih efisien melalui teknologi yang mudah digunakan dan dapat diakses oleh semua perusahaan.
+**Headline**
+Apa itu Connect?
 
----
+**Description**
+Connect adalah platform terpadu yang membantu perusahaan logistik mengelola seluruh operasional dalam satu tempat. Mulai dari pantauan gudang, pengaturan rute, kelola armada, hingga kepuasan pelanggan.
 
-## Misi
-
-1. Menyediakan platform operasional logistik yang sederhana dan mudah digunakan.
-2. Membantu perusahaan mengelola gudang, armada, dan pengiriman dalam satu sistem.
-3. Mengurangi proses manual agar operasional menjadi lebih cepat dan rapi.
-4. Membuka akses teknologi logistik untuk perusahaan dari berbagai skala.
-
----
-
-# Produk dalam Ekosistem Connect
-
-Connect menghadirkan beberapa sistem yang dirancang untuk membantu operasional logistik sehari-hari.
+**Key Features (with icons)**
+- Kelola Stok & Gudang
+- Atur & Pantau Armada
+- Pengaturan Rute Pengiriman
+- Analisis & Laporan Operasional
 
 ---
 
-## Enigma TMS
+## Produk Ekosistem
 
-**Sistem Manajemen Transportasi**
+**Section Title**
+Ekosistem Produk
 
-Enigma TMS membantu perusahaan logistik mengatur pengiriman dan armada kendaraan dengan lebih mudah.
+**Headline**
+Sistem yang Menggerakkan Bisnis Anda
 
-### Fitur Utama
+**Subtext**
+Pilih produk yang sesuai dengan kebutuhan operasional Anda, atau gunakan keduanya untuk integrasi tanpa batas.
 
-* Mengatur jadwal pengiriman
-* Mengelola armada kendaraan
-* Memantau status pengiriman
-* Melihat laporan performa armada
+### Onward TMS — Sistem Manajemen Transportasi
 
-**CTA:**
-Pelajari Enigma TMS
+**Badge**: 🎉 100% Gratis Selamanya
 
----
+**Description**
+Platform lengkap tanpa biaya untuk memantau armada kendaraan, atur rute, dan lacak pengiriman.
 
-## Enigma WMS
+**Features:**
+- Pengguna & Order Tanpa Batas
+- Pantau Armada Langsung
+- Kelola Driver & Perjalanan
 
-**Sistem Manajemen Gudang**
+**CTA**: Pelajari TMS Lebih Lanjut
 
-Enigma WMS membantu mengelola aktivitas gudang agar stok dan pergerakan barang lebih terkontrol.
+### Onward WMS — Sistem Manajemen Gudang
 
-### Fitur Utama
+**Description**
+Sistem cerdas untuk mengelola stok barang, proses penerimaan barang, dan otomatisasi pengambilan & pengepakan barang.
 
-* Mengelola stok barang
-* Mencatat penerimaan barang
-* Mengatur proses picking dan packing
-* Melihat laporan inventori
-
-**CTA:**
-Pelajari Enigma WMS
+**CTA**: Pelajari WMS Lebih Lanjut
 
 ---
 
-# Mengapa Menggunakan Connect?
+## CTA Section
 
-### Operasional Lebih Rapi
+**Headline**
+Siap Mengubah Cara Anda Beroperasi?
 
-Semua aktivitas logistik tercatat dalam satu sistem sehingga lebih mudah dipantau.
+**Subtext**
+Bergabunglah dengan daftar tunggu kami sekarang dan bersiaplah untuk meningkatkan efisiensi logistik Anda ke level berikutnya.
 
-### Mudah Digunakan
+**CTA Button**
+Mulai Sekarang — Gratis
 
-Dirancang agar mudah dipahami oleh tim operasional logistik.
-
-### Sistem Terintegrasi
-
-Gudang, transportasi, dan pengiriman saling terhubung dalam satu platform.
-
-### Mendukung Pertumbuhan Bisnis
-
-Memudahkan perusahaan logistik mengelola operasional yang semakin besar.
+**Trust Note**
+Tidak ada komitmen. Batalkan kapan saja.
 
 ---
 
-# Jadilah Bagian dari Connect
-
-Connect saat ini masih dalam tahap pengembangan.
-
-Kami mengundang perusahaan logistik di seluruh Indonesia untuk bergabung dalam daftar tunggu dan menjadi pengguna awal platform ini.
-
-Dengan bergabung lebih awal, Anda akan menjadi yang pertama mencoba fitur baru dan membantu kami membangun platform yang benar-benar sesuai kebutuhan operasional logistik.
-
-**CTA:**
-Gabung ke Daftar Tunggu
+*Updated from HomePage.tsx implementation*

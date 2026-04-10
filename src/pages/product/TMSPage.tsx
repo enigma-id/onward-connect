@@ -429,21 +429,20 @@ const problems = [
 const steps = [
   {
     number: "1",
-    title: "Setup Data Anda (30 menit)",
-    description:
-      "Masukkan data customer, driver, dan kendaraan. Atur harga per rute jika diperlukan. Tim kami akan bantu jika butuh bantuan.",
+    title: "Daftar Akun (1 menit)",
+    description: "Isi nama dan email. Anda sudah bisa pakai langsung.",
   },
   {
     number: "2",
-    title: "Buat Order Pertama Anda",
+    title: "Buat Order Pertama (10 menit)",
     description:
-      'Klik "Create Order" dan isi detail. Tugaskan driver dan kendaraan. Cetak surat jalan dan driver siap berangkat.',
+      'Klik "Buat Order", isi detail pengiriman. Pilih driver dan armada. Selesai!',
   },
   {
     number: "3",
     title: "Pantau & Kelola",
     description:
-      "Lihat progress di dashboard. Tangani exception jika ada. Generate laporan kapan saja.",
+      "Lihat status semua pengiriman di satu tampilan. Atur masalah kalau ada.",
   },
 ];
 
@@ -465,28 +464,28 @@ const benefits = [
   },
   {
     icon: <HeartIcon className="w-8 h-8" />,
-    title: "Customer Happy",
-    desc: "Tracking real-time membuat customer lebih tenang dan percaya",
+    title: "Customer Lebih Tenang",
+    desc: "Lacak langsung bikin customer lebih tenang dan percaya",
   },
   {
     icon: <TrendingUpIcon className="w-8 h-8" />,
-    title: "Bisnis Tumbuh",
-    desc: "Fokus pada kembangkan bisnis, bukan urusan administrasi",
+    title: "Bisnis Bertumbuh",
+    desc: "Fokus kembangkan bisnis, bukan urusan administrasi",
   },
   {
     icon: <DevicePhoneMobileIcon className="w-8 h-8" />,
-    title: "Akses Dari Mana Saja",
-    desc: "Cloud-based, bisa diakses dari office maupun di lapangan",
+    title: "Bisa Dibuka Di Mana Saja",
+    desc: "Bisa diakses online, dari kantor maupun di lapangan",
   },
   {
     icon: <GlobeAsiaAustraliaIcon className="w-8 h-8" />,
-    title: "Dirancang untuk Indonesia",
+    title: "Dibuat untuk Indonesia",
     desc: "Mengerti kebutuhan logistik lokal dengan data wilayah Indonesia lengkap",
   },
   {
     icon: <WrenchScrewdriverIcon className="w-8 h-8" />,
-    title: "Support Terjamin",
-    desc: "Tim support lokal siap membantu ketika Anda butuh bantuan",
+    title: "Bantuan Terjamin",
+    desc: "Tim bantuan lokal siap membantu kalau Anda butuh bantuan",
   },
 ];
 
@@ -527,40 +526,24 @@ const benefits = [
 
 const faqs = [
   {
-    q: "Apakah sulit untuk migrasi dari sistem lama?",
-    a: "Tidak sulit! Kami menyediakan template CSV yang bisa Anda isi untuk migrasi master data (customer, driver, kendaraan). Cukup upload file CSV dan data akan terimport otomatis. Tim support kami juga siap membantu jika Anda mengalami kendala.",
+    q: "Apakah benar gratis selamanya?",
+    a: "Ya! TMS Onward 100% gratis selamanya tanpa biaya tersembunyi. Tidak ada biaya daftar, tidak ada biaya per pengguna, tidak ada biaya per order. Anda bisa pakai semua fitur tanpa batasan.",
   },
   {
-    q: "Apakah driver saya perlu install aplikasi?",
-    a: "Tidak perlu! Driver cukup buka browser di HP mereka dan login ke TMS Onward. Tidak ada instalasi aplikasi yang memakan memori. Tersedia juga fitur driver-friendly untuk update status pengiriman dengan mudah.",
+    q: "Apakah sulit pindah dari sistem lama?",
+    a: "Tidak sulit! Kami sediakan format CSV yang bisa Anda isi untuk pindah data utama (pelanggan, driver, kendaraan). Cukup upload file CSV dan data akan masuk otomatis. Tim bantuan kami juga siap membantu kalau ada kendala.",
+  },
+  {
+    q: "Apakah driver saya perlu pasang aplikasi?",
+    a: "Tidak perlu! Driver cukup buka browser di HP mereka dan login ke TMS Onward. Tidak ada instalasi aplikasi yang makan memori. Ada juga fitur yang mudah dipakai driver untuk update status pengiriman.",
   },
   {
     q: "Apakah data saya aman?",
-    a: "Ya, data Anda di-backup setiap hari dan disimpan di server Indonesia. Kami menggunakan enkripsi SSL dan mematuhi standar keamanan data. Anda juga bisa export data Anda kapan saja.",
+    a: "Ya, data Anda dicadangkan setiap hari dan disimpan di server Indonesia. Kami pakai pengamanan SSL dan ikuti standar keamanan data. Anda juga bisa download data Anda kapan saja.",
   },
   {
-    q: "Bisa custom fitur sesuai kebutuhan kami?",
-    a: "Untuk kebutuhan custom atau spesifik, silakan hubungi tim support kami. Kami akan diskusikan bagaimana solusi terbaik untuk kebutuhan bisnis Anda.",
-  },
-  {
-    q: "Bagaimana jika saya butuh training untuk tim saya?",
-    a: "Kami menyediakan dokumentasi lengkap dan sesi training untuk tim Anda. Tim support kami siap membantu proses onboarding agar tim Anda bisa menggunakan TMS Onward dengan maksimal.",
-  },
-  {
-    q: "Bagaimana mengelola harga per rute yang berbeda-beda?",
-    a: "TMS Onward memiliki fitur pricing matrix yang fleksibel. Anda bisa set harga berdasarkan rute asal-tujuan, jenis kendaraan, atau kategori customer. Harga otomatis terap saat membuat order.",
-  },
-  {
-    q: "Apakah customer bisa melacak pengiriman mereka?",
-    a: "Ya! Customer bisa melacak status pengiriman secara real-time melalui link tracking. Mereka bisa melihat posisi armada dan estimasi waktu tiba tanpa perlu hubungi call center.",
-  },
-  {
-    q: "Bagaimana jika saya punya banyak cabang atau gudang?",
-    a: "TMS Onward mendukung multi-cabang dan multi-gudang. Setiap cabang bisa kelola order dan armada sendiri, tapi manajemen pusat tetap bisa monitoring semua operasional dalam satu dashboard.",
-  },
-  {
-    q: "Berapa lama proses setup sampai bisa dipakai?",
-    a: "Setup dasar bisa selesai dalam 1-2 hari. Setelah account aktif, Anda bisa langsung input master data dan mulai buat order. Kami juga bantu proses onboarding untuk tim Anda.",
+    q: "Berapa lama bisa dipakai?",
+    a: "Setelah daftar, Anda bisa langsung pakai dalam hitungan menit. Isi data pelanggan, driver, dan kendaraan. Sudah bisa buat order pertama Anda. Kalau butuh bantuan, tim kami siap pandu.",
   },
 ];
 
@@ -581,12 +564,60 @@ export default function TMSPage() {
     <>
       <Helmet>
         <title>
-          Onward TMS | Sistem Manajemen Transportasi - Gratis Selamanya
+          Onward TMS - Sistem Manajemen Transportasi Gratis Selamanya | #1 di Indonesia
         </title>
         <meta
           name="description"
-          content="Kelola armada, driver, dan pengiriman dengan mudah. Sistem manajemen transportasi gratis selamanya untuk perusahaan logistik Indonesia."
+          content="Onward TMS - Sistem manajemen transportasi gratis selamanya dari Onward. Kelola armada, driver, pengiriman, dan rute dengan mudah. Solusi logistik #1 untuk perusahaan Indonesia."
         />
+        <meta name="keywords" content="Onward, Onward TMS, sistem manajemen transportasi, TMS gratis, software logistik Indonesia, kelola armada, manajemen pengiriman, transport management system, logistik Indonesia, tracking pengiriman, rute pengiriman" />
+        <meta name="author" content="Onward" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://onward.id/transportasi" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://onward.id/transportasi" />
+        <meta property="og:title" content="Onward TMS - Sistem Manajemen Transportasi Gratis Selamanya" />
+        <meta property="og:description" content="Kelola armada, driver, dan pengiriman dengan mudah. Solusi logistik gratis selamanya dari Onward untuk perusahaan Indonesia." />
+        <meta property="og:image" content="https://onward.id/images/tms-og-image.jpg" />
+        <meta property="og:site_name" content="Onward" />
+        <meta property="og:locale" content="id_ID" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://onward.id/transportasi" />
+        <meta name="twitter:title" content="Onward TMS - Sistem Manajemen Transportasi Gratis Selamanya" />
+        <meta name="twitter:description" content="Kelola armada, driver, dan pengiriman dengan mudah. Solusi logistik gratis selamanya dari Onward." />
+        <meta name="twitter:image" content="https://onward.id/images/tms-twitter-image.jpg" />
+
+        {/* Schema.org structured data */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "Onward TMS",
+              "applicationCategory": "BusinessApplication",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "IDR"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "ratingCount": "500"
+              },
+              "author": {
+                "@type": "Organization",
+                "name": "Onward"
+              },
+              "description": "Sistem manajemen transportasi gratis selamanya untuk kelola armada, driver, dan pengiriman.",
+              "keywords": "Onward TMS, transport management system, logistik Indonesia, software armada"
+            }
+          `}
+        </script>
       </Helmet>
 
       <div>
@@ -617,7 +648,7 @@ export default function TMSPage() {
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-            <div className="text-center max-w-4xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto">
               <div className="inline-flex items-center glass rounded-full px-6 py-3 mb-8 shadow-lg shadow-primary-500/10 border border-primary-500/30">
                 <span className="text-xl mr-2">🎉</span>
                 <span className="font-bold text-primary-300">
@@ -626,17 +657,14 @@ export default function TMSPage() {
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black font-display text-white mb-6 leading-tight">
-                Kelola Armada Anda dengan Mudah
+                Kelola Pengiriman
+                <span className="gradient-text"> Tanpa Pusing</span>
               </h1>
-              <p className="text-2xl md:text-3xl font-bold gradient-text mb-8">
-                Satu Sistem untuk Semua Kebutuhan Logistik
-              </p>
-
               <p className="text-xl text-surface-300 mb-12 max-w-3xl mx-auto leading-relaxed">
                 Sistem manajemen transportasi{" "}
                 <strong className="text-white">gratis selamanya</strong> yang
-                dirancang khusus untuk perusahaan logistik di Indonesia. Pantau
-                pengiriman, kelola driver, dan lacak armada dalam satu platform
+                dirancang khusus untuk perusahaan logistik di Indonesia. Lacak
+                pengiriman, kelola driver, dan pantau armada dalam satu platform
                 tanpa biaya.
               </p>
 

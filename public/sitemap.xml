@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://enigmaconnect.id/</loc>
+    <loc>https://connect.onward.co.id/</loc>
     <lastmod>2025-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://enigmaconnect.id/produk/tms</loc>
-    <lastmod>2025-01-06</lastmod>
+    <loc>https://connect.onward.co.id/transportasi</loc>
+    <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://enigmaconnect.id/produk/wms</loc>
-    <lastmod>2025-01-06</lastmod>
+    <loc>https://connect.onward.co.id/gudang</loc>
+    <lastmod>2025-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://enigmaconnect.id/about</loc>
+    <loc>https://connect.onward.co.id/about</loc>
     <lastmod>2025-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://enigmaconnect.id/contact</loc>
+    <loc>https://connect.onward.co.id/contact</loc>
     <lastmod>2025-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://enigmaconnect.id/login</loc>
+    <loc>https://connect.onward.co.id/login</loc>
     <lastmod>2025-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://enigmaconnect.id/signup</loc>
+    <loc>https://connect.onward.co.id/signup</loc>
     <lastmod>2025-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

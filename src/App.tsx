@@ -70,8 +70,8 @@ function App() {
         {/* Public routes with MainLayout */}
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="produk/tms" element={<TMSPage />} />
-          <Route path="produk/wms" element={<WMSPage />} />
+          <Route path="transportasi" element={<TMSPage />} />
+          <Route path="gudang" element={<WMSPage />} />
           <Route path="404" element={<NotFoundPage />} />
         </Route>
 
@@ -82,8 +82,10 @@ function App() {
         {/* Full screen split layout for signup */}
         <Route path="/signup" element={<SignupPage />} />
 
-        {/* Redirect /produk to /produk/tms */}
-        <Route path="/produk" element={<Navigate to="/produk/tms" replace />} />
+        {/* Legacy redirect /produk to /transportasi */}
+        <Route path="/produk" element={<Navigate to="/transportasi" replace />} />
+        <Route path="/produk/tms" element={<Navigate to="/transportasi" replace />} />
+        <Route path="/produk/wms" element={<Navigate to="/gudang" replace />} />
 
         {/* 404 - Not Found */}
         <Route path="*" element={<Navigate to="/404" replace />} />
