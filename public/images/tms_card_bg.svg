@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <!-- Emerald background -->
+  <rect width="100%" height="100%" fill="#022c22" />
+  
+  <defs>
+    <!-- Map Grid Pattern -->
+    <pattern id="cardGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#059669" stroke-width="0.5" opacity="0.3" />
+    </pattern>
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Grid -->
+  <rect width="100%" height="100%" fill="url(#cardGrid)" />
+
+  <!-- Background Dim Routes -->
+  <path d="M -50 100 Q 200 300 450 150 T 850 350" fill="none" stroke="#064e3b" stroke-width="3" />
+  <path d="M 100 450 Q 300 100 600 200 T 850 50" fill="none" stroke="#064e3b" stroke-width="3" />
+
+  <!-- Active Route 1 (Primary) -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M -50 100 Q 200 300 450 150 T 850 350" stroke="#10b981" stroke-width="4" stroke-dasharray="25 800" filter="url(#glowGreen)">
+       <animate attributeName="stroke-dashoffset" from="825" to="0" dur="4s" repeatCount="indefinite" />
+    </path>
+    <!-- Trail -->
+    <path d="M -50 100 Q 200 300 450 150 T 850 350" stroke="#34d399" stroke-width="2" stroke-dasharray="2 12" opacity="0.5">
+       <animate attributeName="stroke-dashoffset" from="14" to="0" dur="1s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Active Route 2 (Accent) -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M 100 450 Q 300 100 600 200 T 850 50" stroke="#f59e0b" stroke-width="4" stroke-dasharray="20 900" filter="url(#glowGreen)">
+       <animate attributeName="stroke-dashoffset" from="920" to="0" dur="5s" repeatCount="indefinite" />
+    </path>
+    <path d="M 100 450 Q 300 100 600 200 T 850 50" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4 8" opacity="0.5">
+       <animate attributeName="stroke-dashoffset" from="12" to="0" dur="1.2s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Location Nodes -->
+  <g>
+    <!-- Node 1 -->
+    <circle cx="210" cy="245" r="5" fill="#022c22" stroke="#10b981" stroke-width="2" />
+    <circle cx="210" cy="245" r="15" fill="none" stroke="#10b981" stroke-width="1.5">
+       <animate attributeName="r" values="5;25" dur="2s" repeatCount="indefinite" />
+       <animate attributeName="opacity" values="0.8;0" dur="2s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Node 2 -->
+    <circle cx="450" cy="150" r="5" fill="#022c22" stroke="#10b981" stroke-width="2" />
+    
+    <!-- Node 3 (Intersection/Hub) -->
+    <circle cx="440" cy="155" r="8" fill="#10b981" filter="url(#glowGreen)" opacity="0.4">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 4 (Accent) -->
+    <circle cx="600" cy="200" r="5" fill="#022c22" stroke="#f59e0b" stroke-width="2" />
+    <circle cx="600" cy="200" r="15" fill="none" stroke="#f59e0b" stroke-width="1.5">
+       <animate attributeName="r" values="5;25" dur="2.5s" repeatCount="indefinite" />
+       <animate attributeName="opacity" values="0.6;0" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

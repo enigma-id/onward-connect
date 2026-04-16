@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <!-- Base Background -->
+  <rect width="800" height="500" fill="#022c22" />
+  
+  <!-- Subtle Grid -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#047857" stroke-width="0.5" opacity="0.3" />
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <!-- Radar Sweep -->
+  <path d="M 400 250 L 400 50 A 200 200 0 0 1 600 250 Z" fill="#10b981" opacity="0.1">
+    <animateTransform attributeName="transform" type="rotate" from="0 400 250" to="360 400 250" dur="4s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Route Line -->
+  <path d="M 100 400 Q 300 100 400 250 T 700 100" fill="none" stroke="#064e3b" stroke-width="4" stroke-dasharray="10 10" />
+  <path d="M 100 400 Q 300 100 400 250 T 700 100" fill="none" stroke="#10b981" stroke-width="4" stroke-dasharray="20 1000" filter="url(#glow)">
+    <animate attributeName="stroke-dashoffset" from="1020" to="0" dur="5s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Map Markers -->
+  <g transform="translate(100, 400)">
+    <circle r="8" fill="#10b981" />
+    <circle r="20" fill="none" stroke="#10b981" stroke-width="2" opacity="0">
+      <animate attributeName="r" values="8;30" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <g transform="translate(400, 250)">
+    <circle r="6" fill="#34d399" />
+    <circle r="15" fill="none" stroke="#34d399" stroke-width="1.5" opacity="0">
+      <animate attributeName="r" values="6;25" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <g transform="translate(700, 100)">
+    <circle r="10" fill="#059669" filter="url(#glow)" />
+    <!-- Destination Pin -->
+    <path d="M 0 0 C 15 -20 15 -35 0 -35 C -15 -35 -15 -20 0 0" fill="#10b981" />
+    <circle cy="-23" r="4" fill="#022c22" />
+    <circle r="25" fill="none" stroke="#059669" stroke-width="2" opacity="0">
+      <animate attributeName="r" values="10;40" dur="1.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Floating Data Labels -->
+  <g transform="translate(130, 380)" opacity="0.8">
+    <rect width="80" height="24" rx="4" fill="#064e3b" />
+    <text x="40" y="16" fill="#a7f3d0" font-family="monospace" font-size="10" text-anchor="middle">DISPATCH</text>
+  </g>
+  <g transform="translate(320, 220)" opacity="0.8">
+    <rect width="70" height="24" rx="4" fill="#064e3b" />
+    <text x="35" y="16" fill="#a7f3d0" font-family="monospace" font-size="10" text-anchor="middle">TRANSIT</text>
+  </g>
+</svg>

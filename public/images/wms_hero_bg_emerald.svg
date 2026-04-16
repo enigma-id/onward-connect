@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <!-- Soft Glows -->
+    <radialGradient id="glowTop" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#022c22" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="blurNeon" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Large, clean Floor Grid (less noise) -->
+    <pattern id="floorGrid" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M 120 0 L 0 0 0 120" fill="none" stroke="#064e3b" stroke-width="1" stroke-opacity="0.2"/>
+      <circle cx="0" cy="0" r="1.5" fill="#059669" opacity="0.3"/>
+    </pattern>
+
+    <!-- Simplified Vertical Rack (Larger) -->
+    <g id="rack">
+      <rect x="0" y="0" width="30" height="200" fill="#022c22" stroke="#059669" stroke-width="1.5" rx="4" />
+      <rect x="5" y="15" width="20" height="30" fill="#065f46" rx="2" />
+      <rect x="5" y="65" width="20" height="40" fill="#065f46" rx="2" />
+      <!-- Glowing active sorting bin -->
+      <rect x="5" y="125" width="20" height="25" fill="#10b981" rx="2" filter="url(#blurNeon)" opacity="0.8">
+          <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.5s" repeatCount="indefinite" />
+      </rect>
+      <rect x="5" y="165" width="20" height="20" fill="#065f46" rx="2" />
+    </g>
+
+    <!-- Simplified Horizontal Rack -->
+    <g id="rack-horizontal">
+      <rect x="0" y="0" width="240" height="30" fill="#022c22" stroke="#059669" stroke-width="1.5" rx="4" />
+      <rect x="15" y="5" width="40" height="20" fill="#065f46" rx="2" />
+      <rect x="75" y="5" width="60" height="20" fill="#065f46" rx="2" />
+      <rect x="155" y="5" width="30" height="20" fill="#10b981" rx="2" filter="url(#blurNeon)" opacity="0.8">
+          <animate attributeName="opacity" values="0.1;0.9;0.1" dur="4.5s" repeatCount="indefinite" />
+      </rect>
+      <rect x="205" y="5" width="20" height="20" fill="#065f46" rx="2" />
+    </g>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#022c22" />
+  <rect width="1920" height="1080" fill="url(#floorGrid)" />
+  <rect width="1920" height="1080" fill="url(#glowTop)" />
+
+  <!-- SIMPLIFIED WAREHOUSE LAYOUT -->
+  <!-- Left Warehouse Section: clean rows spaced out -->
+  <g opacity="0.7">
+    <use href="#rack" x="200" y="200" />
+    <use href="#rack" x="300" y="200" />
+    <use href="#rack" x="400" y="200" />
+    
+    <use href="#rack" x="200" y="500" />
+    <use href="#rack" x="300" y="500" />
+    <use href="#rack" x="400" y="500" />
+  </g>
+
+  <!-- Right Warehouse Section: larger and simpler -->
+  <g opacity="0.7">
+    <use href="#rack-horizontal" x="1400" y="300" />
+    <use href="#rack-horizontal" x="1400" y="400" />
+    
+    <use href="#rack-horizontal" x="1400" y="600" />
+    <use href="#rack-horizontal" x="1400" y="700" />
+  </g>
+  
+  <!-- Clear Central Conveyor Area -->
+  <g stroke="#34d399" stroke-width="2" fill="none" opacity="0.8">
+    <rect x="700" y="400" width="400" height="200" stroke-dasharray="10 8" rx="12" fill="#022c22" fill-opacity="0.6"/>
+    
+    <!-- Bold Main Conveyor -->
+    <path d="M 600 500 L 1200 500" stroke="#10b981" stroke-width="12" stroke-dasharray="30 20" opacity="0.4">
+        <animate attributeName="stroke-dashoffset" from="50" to="0" dur="1s" repeatCount="indefinite" />
+    </path>
+    <path d="M 600 500 L 1200 500" stroke="#6ee7b7" stroke-width="2" opacity="0.7"/>
+
+    <!-- Automated Packages -->
+    <rect x="750" y="480" width="40" height="40" fill="#6ee7b7" rx="4" filter="url(#blurNeon)">
+       <animate attributeName="x" values="600;1160;600" dur="5s" repeatCount="indefinite" />
+    </rect>
+    <rect x="950" y="485" width="30" height="30" fill="#34d399" rx="4" filter="url(#blurNeon)">
+       <animate attributeName="x" values="1170;600;1170" dur="4s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- Elegant, minimalistic AGV Routing Lines -->
+  <g fill="none" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round" opacity="0.6">
+    <!-- Single Clean Outer Loop -->
+    <path d="M 100 100 L 1800 100 L 1800 900 L 100 900 Z" stroke-dasharray="25 1500" opacity="0.4">
+      <animate attributeName="stroke-dashoffset" from="3400" to="0" dur="10s" repeatCount="indefinite" />
+    </path>
+    <!-- Single Delivery Stream to Conveyor -->
+    <path d="M 500 800 L 500 650 L 900 650 L 900 600" stroke-dasharray="20 400" stroke="#10b981" filter="url(#blurNeon)" stroke-width="3">
+       <animate attributeName="stroke-dashoffset" from="0" to="-840" dur="4s" repeatCount="indefinite" />
+    </path>
+    <!-- Dispatch Stream from Conveyor -->
+    <path d="M 1200 600 L 1300 600 L 1300 200 L 1700 200" stroke-dasharray="20 400" stroke="#34d399" filter="url(#blurNeon)" stroke-width="3">
+       <animate attributeName="stroke-dashoffset" from="1800" to="0" dur="4.5s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <!-- Emerald background -->
+  <rect width="100%" height="100%" fill="#022c22" />
+
+  <defs>
+    <!-- Isometric Floor Pattern -->
+    <pattern id="isoFloor" width="40" height="23" patternUnits="userSpaceOnUse" patternTransform="scale(1.5)">
+      <path d="M 20 0 L 40 11.5 L 20 23 L 0 11.5 Z" fill="none" stroke="#059669" stroke-width="0.5" opacity="0.3" />
+    </pattern>
+    <filter id="glowNeon" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Simplified Data Rack Group -->
+    <g id="dataRack">
+      <rect x="0" y="0" width="40" height="120" fill="#047857" stroke="#065f46" stroke-width="1" rx="2" />
+      <rect x="5" y="10" width="30" height="15" fill="#064e3b" rx="1" />
+      <rect x="5" y="35" width="30" height="25" fill="#064e3b" rx="1" />
+      <!-- Animated blinking slot -->
+      <rect x="5" y="70" width="30" height="10" fill="#10b981" rx="1" filter="url(#glowNeon)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="5" y="90" width="30" height="20" fill="#064e3b" rx="1" />
+    </g>
+  </defs>
+
+  <!-- Floor -->
+  <rect width="100%" height="100%" fill="url(#isoFloor)" />
+
+  <!-- Racks Background -->
+  <g opacity="0.8">
+    <use href="#dataRack" x="150" y="50" />
+    <use href="#dataRack" x="250" y="50" />
+    <use href="#dataRack" x="350" y="50" />
+    <use href="#dataRack" x="450" y="50" />
+    <use href="#dataRack" x="550" y="50" />
+  </g>
+
+  <!-- Automation Conveyor Core -->
+  <g transform="translate(100, 240)">
+    <!-- Main Belt Base -->
+    <rect x="0" y="0" width="600" height="40" rx="6" fill="#065f46" stroke="#047857" stroke-width="1" />
+    <!-- Animated Belt Surface -->
+    <rect x="5" y="5" width="590" height="30" rx="3" fill="#064e3b" />
+    <path d="M 5 20 L 595 20" stroke="#022c22" stroke-width="15" stroke-dasharray="10 10">
+       <animate attributeName="stroke-dashoffset" from="20" to="0" dur="0.5s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Cargo Boxes moving on Belt -->
+    <!-- Box 1 -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="500 0" dur="5s" repeatCount="indefinite" />
+      <rect x="10" y="-20" width="30" height="30" fill="#10b981" rx="3" filter="url(#glowNeon)" />
+      <rect x="15" y="-15" width="20" height="20" fill="#34d399" rx="2" />
+    </g>
+
+    <!-- Box 2 -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="500 0" dur="5s" begin="2s" repeatCount="indefinite" />
+      <rect x="10" y="-15" width="25" height="25" fill="#f59e0b" rx="2" filter="url(#glowNeon)" />
+      <rect x="15" y="-10" width="15" height="15" fill="#fbbf24" rx="1" />
+    </g>
+    
+    <!-- Box 3 -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="500 0" dur="5s" begin="3.5s" repeatCount="indefinite" />
+      <rect x="10" y="-10" width="35" height="20" fill="#0ea5e9" rx="2" filter="url(#glowNeon)" />
+    </g>
+  </g>
+
+  <!-- Scanning Sensor Ring overlapping the belt -->
+  <g transform="translate(400, 220)">
+    <path d="M 0 0 L 0 80" stroke="#ef4444" stroke-width="2" stroke-dasharray="4 4" opacity="0.6">
+       <animate attributeName="stroke-dashoffset" from="8" to="0" dur="0.5s" repeatCount="indefinite" />
+    </path>
+    <!-- Scanner head -->
+    <rect x="-10" y="-10" width="20" height="10" fill="#047857" rx="2" />
+  </g>
+
+  <!-- Floor Robot AGV -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="400 0" dur="4s" repeatCount="indefinite" />
+    <g transform="translate(150, 330)">
+       <rect x="0" y="0" width="40" height="15" fill="#065f46" rx="4" />
+       <!-- AGV Lights -->
+       <circle cx="5" cy="7" r="2" fill="#10b981" filter="url(#glowNeon)" />
+       <circle cx="35" cy="7" r="2" fill="#ef4444" />
+    </g>
+  </g>
+  <!-- AGV Path -->
+  <path d="M -50 338 L 850 338" stroke="#10b981" stroke-width="1" stroke-dasharray="5 5" opacity="0.5" />
+
+</svg>

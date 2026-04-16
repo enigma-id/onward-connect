@@ -585,21 +585,21 @@ export default function WMSPage() {
         {/* ═══════════════════════════════════════════════════════ */}
         {/* HERO SECTION — Split layout with floating cards */}
         {/* ═══════════════════════════════════════════════════════ */}
-        <section className="relative min-h-screen flex items-center overflow-hidden bg-white">
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-emerald-950">
           {/* Background */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 z-0">
               <img
-                src="/images/wms_hero_bg_indonesia.png"
+                src="/images/wms_hero_bg_emerald.svg"
                 alt="Indonesian Logistics Warehouse"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-surface-950/40" />
-              <div className="absolute inset-0 bg-linear-to-b from-surface-950/80 via-surface-950/20 to-transparent" />
+              <div className="absolute inset-0 bg-emerald-950/20" />
+              <div className="absolute inset-0 bg-linear-to-b from-emerald-950/80 via-emerald-950/20 to-transparent" />
             </div>
-            <div className="absolute top-1/4 right-1/4 w-[31rem] h-[31rem] bg-primary-500/8 rounded-full blur-[120px] animate-pulse" />
+            <div className="absolute top-1/4 right-1/4 w-[31rem] h-[31rem] bg-emerald-500/10 rounded-full blur-[120px] animate-pulse" />
             <div
-              className="absolute bottom-1/4 left-1/3 w-[25rem] h-[25rem] bg-accent-500/6 rounded-full blur-[100px] animate-pulse"
+              className="absolute bottom-1/4 left-1/3 w-[25rem] h-[25rem] bg-emerald-400/8 rounded-full blur-[100px] animate-pulse"
               style={{ animationDelay: "2s" }}
             />
           </div>

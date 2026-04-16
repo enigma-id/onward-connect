@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Filters for glows & 3D shadows -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.2" />
+    </filter>
+    <filter id="glowCenter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glowNode" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glowIcon" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Gradients -->
+    <radialGradient id="hubGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </radialGradient>
+    
+    <!-- 3D Sphere Base Gradient -->
+    <radialGradient id="glassSphereBase" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#f8fafc" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#e2e8f0" stop-opacity="0.95" />
+    </radialGradient>
+  </defs>
+
+  <!-- Orbital Rings Backdrop (Top-down 2D view, no tilt) -->
+  <g fill="none" stroke="#e2e8f0" stroke-width="1.5">
+    <circle cx="400" cy="400" r="180" stroke-dasharray="10 15">
+      <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="25s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="400" cy="400" r="280" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="30 40 5 40">
+      <animateTransform attributeName="transform" type="rotate" from="360 400 400" to="0 400 400" dur="35s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Connecting Lines -->
+  <g stroke="#cbd5e1" stroke-width="3" opacity="0.4" stroke-dasharray="5 8">
+    <line x1="400" y1="400" x2="200" y2="200" />
+    <line x1="400" y1="400" x2="600" y2="200" />
+    <line x1="400" y1="400" x2="200" y2="600" />
+    <line x1="400" y1="400" x2="600" y2="600" />
+    <line x1="200" y1="200" x2="600" y2="200" opacity="0.5" />
+    <line x1="600" y1="200" x2="600" y2="600" opacity="0.5" />
+    <line x1="600" y1="600" x2="200" y2="600" opacity="0.5" />
+    <line x1="200" y1="600" x2="200" y2="200" opacity="0.5" />
+  </g>
+
+  <!-- Animated Data Streams -->
+  <g fill="none" stroke-width="5">
+    <path d="M 400 400 L 200 200" stroke="#10b981" stroke-dasharray="25 285" opacity="0.9">
+      <animate attributeName="stroke-dashoffset" from="310" to="0" dur="2s" repeatCount="indefinite" />
+    </path>
+    <path d="M 400 400 L 600 200" stroke="#f59e0b" stroke-dasharray="25 285" opacity="0.9">
+      <animate attributeName="stroke-dashoffset" from="310" to="0" dur="2.4s" repeatCount="indefinite" />
+    </path>
+    <path d="M 400 400 L 200 600" stroke="#0ea5e9" stroke-dasharray="25 285" opacity="0.9">
+      <animate attributeName="stroke-dashoffset" from="310" to="0" dur="1.8s" repeatCount="indefinite" />
+    </path>
+    <path d="M 400 400 L 600 600" stroke="#ec4899" stroke-dasharray="25 285" opacity="0.9">
+      <animate attributeName="stroke-dashoffset" from="310" to="0" dur="2.8s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- MASSIVE CORE CONNECT HUB -->
+  <g transform="translate(400, 400)">
+    <circle r="60" fill="none" stroke="#10b981" stroke-width="4">
+      <animate attributeName="r" values="60;160" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <path d="M 0 -75 L 65 -37.5 L 65 37.5 L 0 75 L -65 37.5 L -65 -37.5 Z" fill="url(#hubGradient)" filter="url(#glowCenter)" />
+    <path d="M 0 -62 L 53.7 -31 L 53.7 31 L 0 62 L -53.7 31 L -53.7 -31 Z" fill="#ffffff" opacity="0.98" />
+    
+    <image href="data:image/png;base64,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" x="-38" y="-38" width="76" height="76" />
+  </g>
+
+  <!-- 3D SATELLITE 1: PANTAUAN GUDANG (Top Left) -->
+  <g transform="translate(200, 200)" filter="url(#dropShadow)">
+    <animateTransform attributeName="transform" type="translate" values="200,200; 200,195; 200,200" dur="4s" repeatCount="indefinite" />
+    
+    <!-- 3D Glass Sphere Node Base (r=48) -->
+    <circle r="48" fill="url(#glassSphereBase)" stroke="#10b981" stroke-width="2" />
+    <circle r="43" fill="none" stroke="#10b981" stroke-width="2" opacity="0.3" />
+    
+    <!-- Clean Premium Icon (Gudang/Package) -->
+    <g transform="translate(-20, -20) scale(1.6)" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#glowIcon)">
+      <path d="M16.5 9.4 7.5 4.21" />
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+      <path d="M3.27 6.96 12 12.01l8.73-5.05" />
+      <path d="M12 22.08V12" />
+    </g>
+    
+    <!-- Text Label -->
+    <text x="0" y="70" font-family="sans-serif" font-weight="800" font-size="16" fill="#0f172a" text-anchor="middle" letter-spacing="1">GUDANG</text>
+  </g>
+
+  <!-- 3D SATELLITE 2: OPTIMALISASI RUTE (Top Right) -->
+  <g transform="translate(600, 200)" filter="url(#dropShadow)">
+    <animateTransform attributeName="transform" type="translate" values="600,200; 600,195; 600,200" dur="3.5s" repeatCount="indefinite" />
+    
+    <!-- 3D Glass Sphere Node Base -->
+    <circle r="48" fill="url(#glassSphereBase)" stroke="#f59e0b" stroke-width="2" />
+    <circle r="43" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.3" />
+    
+    <!-- Clean Premium Icon (Rute/Map Pin) -->
+    <g transform="translate(-19, -23) scale(1.6)" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#glowIcon)">
+       <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 0-16 0Z" />
+       <circle cx="12" cy="10" r="3" />
+    </g>
+    
+    <!-- Text Label -->
+    <text x="0" y="70" font-family="sans-serif" font-weight="800" font-size="16" fill="#0f172a" text-anchor="middle" letter-spacing="1">RUTE</text>
+  </g>
+
+  <!-- 3D SATELLITE 3: PENGELOLAAN ARMADA (Bottom Left) -->
+  <g transform="translate(200, 600)" filter="url(#dropShadow)">
+    <animateTransform attributeName="transform" type="translate" values="200,600; 200,595; 200,600" dur="4.5s" repeatCount="indefinite" />
+    
+    <!-- 3D Glass Sphere Node Base -->
+    <circle r="48" fill="url(#glassSphereBase)" stroke="#0ea5e9" stroke-width="2" />
+    <circle r="43" fill="none" stroke="#0ea5e9" stroke-width="2" opacity="0.3" />
+    
+    <!-- Clean Premium Icon (Armada/Truck) -->
+    <g transform="translate(-19, -20) scale(1.6)" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#glowIcon)">
+       <path d="M10 17h4V5H2v12h3" />
+       <path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5" />
+       <path d="M14 17h1" />
+       <circle cx="7.5" cy="17.5" r="2.5" />
+       <circle cx="17.5" cy="17.5" r="2.5" />
+    </g>
+    
+    <!-- Text Label -->
+    <text x="0" y="70" font-family="sans-serif" font-weight="800" font-size="16" fill="#0f172a" text-anchor="middle" letter-spacing="1">ARMADA</text>
+  </g>
+
+  <!-- 3D SATELLITE 4: KEPUASAN PELANGGAN (Bottom Right) -->
+  <g transform="translate(600, 600)" filter="url(#dropShadow)">
+    <animateTransform attributeName="transform" type="translate" values="600,600; 600,595; 600,600" dur="3.8s" repeatCount="indefinite" />
+    
+    <!-- 3D Glass Sphere Node Base -->
+    <circle r="48" fill="url(#glassSphereBase)" stroke="#ec4899" stroke-width="2" />
+    <circle r="43" fill="none" stroke="#ec4899" stroke-width="2" opacity="0.3" />
+    
+    <!-- Clean Premium Icon (Pelanggan/User Check) -->
+    <g transform="translate(-19, -22) scale(1.6)" stroke="#be185d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#glowIcon)">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <polyline points="16 11 18 13 22 9" />
+    </g>
+
+    <!-- Text Label -->
+    <text x="0" y="70" font-family="sans-serif" font-weight="800" font-size="16" fill="#0f172a" text-anchor="middle" letter-spacing="1">PELANGGAN</text>
+  </g>
+
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="400" height="400" fill="#022c22" />
+  
+  <defs>
+    <filter id="neon">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Connecting Lines -->
+  <g stroke="#064e3b" stroke-width="2" stroke-dasharray="5 5">
+    <line x1="200" y1="200" x2="80" y2="80" />
+    <line x1="200" y1="200" x2="320" y2="100" />
+    <line x1="200" y1="200" x2="100" y2="300" />
+    <line x1="200" y1="200" x2="300" y2="280" />
+  </g>
+
+  <!-- Animated Routing Pulses -->
+  <g stroke="#10b981" stroke-width="3" stroke-dasharray="15 200" fill="none" filter="url(#neon)">
+    <line x1="200" y1="200" x2="80" y2="80">
+      <animate attributeName="stroke-dashoffset" from="215" to="0" dur="2s" repeatCount="indefinite" />
+    </line>
+    <line x1="200" y1="200" x2="320" y2="100">
+      <animate attributeName="stroke-dashoffset" from="215" to="0" dur="2.5s" repeatCount="indefinite" />
+    </line>
+    <line x1="200" y1="200" x2="100" y2="300">
+      <animate attributeName="stroke-dashoffset" from="215" to="0" dur="1.8s" repeatCount="indefinite" />
+    </line>
+    <line x1="200" y1="200" x2="300" y2="280">
+      <animate attributeName="stroke-dashoffset" from="215" to="0" dur="3s" repeatCount="indefinite" />
+    </line>
+  </g>
+
+  <!-- Center Hub -->
+  <circle cx="200" cy="200" r="25" fill="#0ed3CF" opacity="0.1">
+     <animate attributeName="r" values="25;40;25" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="200" cy="200" r="15" fill="#047857" />
+  <circle cx="200" cy="200" r="6" fill="#6ee7b7" filter="url(#neon)" />
+
+  <!-- Outer Nodes -->
+  <g fill="#10b981">
+    <!-- Node 1 -->
+    <circle cx="80" cy="80" r="12" fill="#064e3b" />
+    <circle cx="80" cy="80" r="4" fill="#34d399" />
+    <circle cx="80" cy="80" r="16" fill="none" stroke="#34d399">
+      <animate attributeName="r" values="12;24" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0" dur="2s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Node 2 -->
+    <circle cx="320" cy="100" r="12" fill="#064e3b" />
+    <circle cx="320" cy="100" r="4" fill="#34d399" />
+    
+    <!-- Node 3 -->
+    <circle cx="100" cy="300" r="12" fill="#064e3b" />
+    <circle cx="100" cy="300" r="4" fill="#34d399" />
+
+    <!-- Node 4 -->
+    <circle cx="300" cy="280" r="12" fill="#064e3b" />
+    <circle cx="300" cy="280" r="4" fill="#34d399" />
+    <circle cx="300" cy="280" r="16" fill="none" stroke="#34d399">
+      <animate attributeName="r" values="12;24" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0" dur="3s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

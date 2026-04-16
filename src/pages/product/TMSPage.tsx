@@ -626,24 +626,24 @@ export default function TMSPage() {
         {/* ═════════════════════════════════════════════════════════ */}
         <section
           ref={heroRef}
-          className="relative min-h-screen flex items-center overflow-hidden bg-white"
+          className="relative min-h-screen flex items-center overflow-hidden bg-emerald-950"
         >
           <div className="absolute inset-0">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
               <img
-                src="/images/tms_hero_generic_light.png"
+                src="/images/tms_hero_bg_emerald.svg"
                 alt="Logistics Background"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-surface-950/40" />
-              <div className="absolute inset-0 bg-linear-to-b from-surface-950/80 via-surface-950/20 to-transparent" />
+              <div className="absolute inset-0 bg-emerald-950/20" />
+              <div className="absolute inset-0 bg-linear-to-b from-emerald-950/80 via-emerald-950/20 to-transparent" />
             </div>
 
             {/* Ambient Lighting Orbs */}
-            <div className="absolute top-20 right-20 w-96 h-96 bg-primary-500/8 rounded-full blur-3xl animate-pulse z-0" />
+            <div className="absolute top-20 right-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse z-0" />
             <div
-              className="absolute bottom-20 left-20 w-80 h-80 bg-accent-500/8 rounded-full blur-3xl animate-pulse z-0"
+              className="absolute bottom-20 left-20 w-80 h-80 bg-emerald-400/10 rounded-full blur-3xl animate-pulse z-0"
               style={{ animationDelay: "1s" }}
             />
           </div>
@@ -807,11 +807,11 @@ export default function TMSPage() {
                 {/* Card 1: Live Tracking (Wide) */}
                 <div className="scroll-animate md:col-span-2 group relative rounded-[2.5rem] p-10 overflow-hidden border border-surface-200 shadow-xl shadow-surface-200/40 hover:border-primary-300 transition-all duration-500 flex flex-col justify-end">
                   <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-linear-to-t from-surface-950 via-surface-950/80 to-transparent z-10" />
+                    <div className="absolute inset-0 bg-linear-to-t from-surface-950 via-surface-950/40 to-transparent z-10 pointer-events-none" />
                     <img
-                      src="/images/tms_viz_tracking.png"
+                      src="/images/tms_viz_tracking.svg"
                       alt="Live Tracking Map"
-                      className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700"
+                      className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
                   <div className="relative z-20">
@@ -832,11 +832,11 @@ export default function TMSPage() {
                 {/* Card 2: Manajemen Order (Square) */}
                 <div className="scroll-animate md:col-span-1 group relative rounded-[2.5rem] p-10 overflow-hidden border border-surface-200 shadow-xl shadow-surface-200/40 hover:border-primary-300 transition-all duration-500 flex flex-col justify-end">
                   <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-linear-to-t from-surface-950 via-surface-950/50 to-transparent z-10" />
+                    <div className="absolute inset-0 bg-linear-to-t from-surface-950 via-surface-950/20 to-transparent z-10 pointer-events-none" />
                     <img
-                      src="/images/tms_viz_orders.png"
+                      src="/images/tms_viz_orders.svg"
                       alt="Order Management"
-                      className="absolute top-0 left-0 w-[150%] h-[150%] object-cover object-top-left opacity-50 group-hover:scale-105 transition-transform duration-700"
+                      className="absolute top-0 left-0 w-[150%] h-[150%] object-cover object-top-left opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
                   <div className="relative z-20">
@@ -857,11 +857,11 @@ export default function TMSPage() {
                 {/* Card 3: Penugasan & Rute Otomatis (Square) */}
                 <div className="scroll-animate md:col-span-1 group relative rounded-[2.5rem] p-10 overflow-hidden border border-surface-200 shadow-xl shadow-surface-200/40 hover:border-accent-300 transition-all duration-500 flex flex-col justify-end">
                   <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-linear-to-t from-surface-950 via-surface-950/50 to-transparent z-10" />
+                    <div className="absolute inset-0 bg-linear-to-t from-surface-950 via-surface-950/20 to-transparent z-10 pointer-events-none" />
                     <img
-                      src="/images/tms_viz_routes.png"
+                      src="/images/tms_viz_routes.svg"
                       alt="Penugasan Armada"
-                      className="absolute top-0 left-0 w-[150%] h-[150%] object-cover object-top-left opacity-60 group-hover:scale-105 transition-transform duration-700"
+                      className="absolute top-0 left-0 w-[150%] h-[150%] object-cover object-top-left opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
                   <div className="relative z-20 flex-1 flex flex-col justify-end">
@@ -882,11 +882,11 @@ export default function TMSPage() {
                 {/* Card 4: Analitik & Laporan (Wide) */}
                 <div className="scroll-animate md:col-span-2 group relative rounded-[2.5rem] p-10 overflow-hidden border border-surface-200 shadow-xl shadow-surface-200/40 hover:border-accent-300 transition-all duration-500 flex flex-col justify-end">
                   <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-linear-to-t from-surface-950 via-surface-950/80 to-transparent z-10 pointer-events-none" />
+                    <div className="absolute inset-0 bg-linear-to-t from-surface-950 via-surface-950/40 to-transparent z-10 pointer-events-none" />
                     <img
                       src="/images/tms_dashboard.png"
                       alt="Laporan & Analitik"
-                      className="absolute top-0 right-0 w-full h-[80%] object-cover object-top-left opacity-50 group-hover:scale-105 transition-transform duration-700"
+                      className="absolute top-0 right-0 w-full h-[80%] object-cover object-top-left opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
                   <div className="relative z-20 flex-1 flex flex-col justify-end">

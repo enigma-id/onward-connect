@@ -153,16 +153,16 @@ export default function HomePage() {
       {/* ═════════════════════════════════════════════════════════ */}
       {/* HERO SECTION */}
       {/* ═════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-emerald-950 py-20">
         {/* Background Image with Overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-105"
-          style={{
-            backgroundImage: "url(/images/hero_logistics_light.png)",
-          }}
-        />
-        <div className="absolute inset-0 bg-surface-950/40" />
-        <div className="absolute inset-0 bg-linear-to-b from-surface-950/80 via-surface-950/20 to-transparent" />
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-105"
+            style={{
+              backgroundImage: "url(/images/wms_home_hero_bg_emerald.svg)",
+            }}
+          />
+        <div className="absolute inset-0 bg-emerald-950/20" />
+        <div className="absolute inset-0 bg-linear-to-b from-emerald-950/80 via-emerald-950/20 to-transparent" />
 
         {/* Hero content */}
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
@@ -234,7 +234,7 @@ export default function HomePage() {
 
           {/* Stats row */}
           <div
-            className="mt-20 grid grid-cols-3 gap-8 max-w-2xl mx-auto animate-fade-in-up glass-light rounded-3xl p-6 border border-surface-200"
+            className="mt-20 grid grid-cols-3 gap-8 max-w-2xl mx-auto animate-fade-in-up bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-white/20 shadow-2xl"
             style={{ animationDelay: "1s" }}
           >
             {[
@@ -243,10 +243,10 @@ export default function HomePage() {
               { value: "24/7", label: "Pantau 24 Jam Nonstop" },
             ].map((stat, i) => (
               <div key={i} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold font-display text-surface-950">
+                <div className="text-3xl md:text-4xl font-bold font-display text-white">
                   {stat.value}
                 </div>
-                <div className="text-xs md:text-sm text-surface-900 mt-2 font-semibold">
+                <div className="text-xs md:text-sm text-surface-200 mt-2 font-semibold tracking-wide">
                   {stat.label}
                 </div>
               </div>
@@ -369,11 +369,11 @@ export default function HomePage() {
               {/* Image Header */}
               <div className="h-72 w-full relative overflow-hidden shrink-0">
                 <img
-                  src="/images/tms_fleet_generic.png"
-                  alt="Fleet Trucks"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
+                  src="/images/tms_card_bg.svg"
+                  alt="TMS Visual"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 ease-out opacity-90 group-hover:opacity-100"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-surface-900 via-surface-900/60 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-surface-950 via-surface-950/20 to-transparent pointer-events-none" />
 
                 <div className="absolute bottom-6 left-8 flex items-center">
                   <div className="w-14 h-14 rounded-2xl bg-primary-500 flex items-center justify-center mr-4 shadow-lg shadow-primary-500/50">
@@ -445,11 +445,11 @@ export default function HomePage() {
               {/* Image Header */}
               <div className="h-72 w-full relative overflow-hidden shrink-0">
                 <img
-                  src="/images/warehouse_interior_light.png"
-                  alt="Warehouse Interior"
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
+                  src="/images/wms_card_bg.svg"
+                  alt="WMS Visual"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 ease-out opacity-90 group-hover:opacity-100"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-surface-900 via-surface-900/60 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-surface-950 via-surface-950/20 to-transparent pointer-events-none" />
 
                 <div className="absolute bottom-6 left-8 flex items-center">
                   <div className="w-14 h-14 rounded-2xl bg-accent-500 flex items-center justify-center mr-4 shadow-lg shadow-accent-500/50">
