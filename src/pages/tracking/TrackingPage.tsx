@@ -61,7 +61,7 @@ export default function TrackingPage() {
         {/* Title */}
         <h1 className="text-5xl sm:text-6xl font-black text-surface-950 mb-6 tracking-tight text-center">
           Dimana{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-500">
+          <span className="gradient-text">
             Pesanan Saya?
           </span>{" "}
         </h1>

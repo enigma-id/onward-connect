@@ -1,5 +1,5 @@
 /**
- * Status utilities for TMS Onward Admin
+ * Status utilities for Onward TMS Admin
  * Converts snake_case API status values to Title Case for display
  */
 

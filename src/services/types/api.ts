@@ -1,5 +1,5 @@
 /**
- * TMS Onward - API Type Definitions
+ * Onward TMS - API Type Definitions
  *
  * Type definitions for API requests, responses, and error handling.
  */

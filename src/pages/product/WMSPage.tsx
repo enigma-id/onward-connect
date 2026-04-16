@@ -1147,7 +1147,7 @@ export default function WMSPage() {
                 to="/signup"
                 className="group inline-flex items-center justify-center bg-primary-600 text-white px-12 py-5 rounded-3xl font-bold text-xl transition-all duration-300 hover:shadow-2xl hover:shadow-primary-600/30 hover:scale-105 active:scale-95"
               >
-                Buat Akun WMS Gratis
+                Buat Akun Onward WMS Gratis
                 <svg
                   className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform"
                   fill="none"

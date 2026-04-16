@@ -5,7 +5,7 @@ import { signin, signout } from "./slice";
 import { extractUserFromToken } from "./jwtUtils";
 
 /**
- * TMS Onward - Authentication Hooks
+ * Onward TMS - Authentication Hooks
  */
 
 export const useAuth = () => {

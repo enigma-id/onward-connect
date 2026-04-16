@@ -2,7 +2,7 @@ import { createApi } from "@reduxjs/toolkit/query/react";
 import { baseQuery } from "../baseQuery";
 
 /**
- * TMS Onward - Authentication API
+ * Onward TMS - Authentication API
  */
 export const authApi = createApi({
   reducerPath: "authApi",

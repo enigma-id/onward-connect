@@ -527,7 +527,7 @@ const benefits = [
 const faqs = [
   {
     q: "Apakah benar gratis selamanya?",
-    a: "Ya! TMS Onward 100% gratis selamanya tanpa biaya tersembunyi. Tidak ada biaya daftar, tidak ada biaya per pengguna, tidak ada biaya per order. Anda bisa pakai semua fitur tanpa batasan.",
+    a: "Ya! Onward TMS 100% gratis selamanya tanpa biaya tersembunyi. Tidak ada biaya daftar, tidak ada biaya per pengguna, tidak ada biaya per order. Anda bisa pakai semua fitur tanpa batasan.",
   },
   {
     q: "Apakah sulit pindah dari sistem lama?",
@@ -535,7 +535,7 @@ const faqs = [
   },
   {
     q: "Apakah driver saya perlu pasang aplikasi?",
-    a: "Tidak perlu! Driver cukup buka browser di HP mereka dan login ke TMS Onward. Tidak ada instalasi aplikasi yang makan memori. Ada juga fitur yang mudah dipakai driver untuk update status pengiriman.",
+    a: "Tidak perlu! Driver cukup buka browser di HP mereka dan login ke Onward TMS. Tidak ada instalasi aplikasi yang makan memori. Ada juga fitur yang mudah dipakai driver untuk update status pengiriman.",
   },
   {
     q: "Apakah data saya aman?",
@@ -761,9 +761,9 @@ export default function TMSPage() {
             </h2>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto mb-8 leading-relaxed">
               Dari order masuk hingga pengiriman selesai -{" "}
-              <strong className="text-white">TMS Onward</strong> memudahkan
+              <strong className="text-white">Onward TMS</strong> memudahkan
               setiap langkahnya.{" "}
-              <span className="text-accent-200 font-bold">
+              <span className="text-primary-200 font-bold">
                 100% gratis, tanpa batasan.
               </span>
             </p>
@@ -921,7 +921,7 @@ export default function TMSPage() {
                 Cara Mulai
               </span>
               <h2 className="text-4xl md:text-5xl font-bold font-display text-surface-950">
-                Gunakan TMS Onward dalam 3 Langkah Mudah
+                Gunakan Onward TMS dalam 3 Langkah Mudah
               </h2>
             </div>
 
@@ -972,7 +972,7 @@ export default function TMSPage() {
                 Keunggulan
               </span>
               <h2 className="text-4xl md:text-5xl font-bold font-display text-surface-950">
-                Mengapa Memilih TMS Onward?
+                Mengapa Memilih Onward TMS?
               </h2>
             </div>
 
@@ -1068,7 +1068,7 @@ export default function TMSPage() {
             </h2>
             <p className="text-xl text-surface-600 mb-12 max-w-2xl mx-auto leading-relaxed">
               Gabung dengan komunitas logistik Indonesia yang telah berevolusi
-              bersama TMS Onward.
+              bersama Onward TMS.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-5 justify-center">

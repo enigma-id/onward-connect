@@ -1,5 +1,5 @@
 /**
- * TMS Onward - Entity Type Definitions
+ * Onward TMS - Entity Type Definitions
  *
  * Type definitions for TMS domain entities based on backend Go entities.
  * Reference: backend/entity/*.go

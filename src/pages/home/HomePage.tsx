@@ -182,13 +182,7 @@ export default function HomePage() {
           >
             <span className="text-white drop-shadow-lg">Kelola Logistik</span>
             <br />
-            <span
-              className="gradient-text drop-shadow-xl"
-              style={{
-                backgroundImage:
-                  "linear-gradient(135deg, oklch(64.61% .1943 41.12), oklch(75% .15 41.12))",
-              }}
-            >
+            <span className="gradient-text drop-shadow-xl">
               Lebih Cerdas
             </span>
           </h1>
@@ -391,11 +385,9 @@ export default function HomePage() {
               </div>
 
               <div className="p-8 grow flex flex-col text-surface-900">
-                <div className="inline-flex items-center glass-accent rounded-full px-4 py-1.5 mb-4 border border-accent-500/30 self-start">
+                <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary-50 border border-primary-200 text-primary-700 text-[10px] font-bold uppercase tracking-widest mb-4 shadow-sm self-start">
                   <span className="text-sm mr-2 leading-none">🎉</span>
-                  <span className="text-xs font-bold text-accent-600 uppercase tracking-wider">
-                    100% Gratis Selamanya
-                  </span>
+                  100% Gratis Selamanya
                 </div>
                 <p className="text-surface-700 text-lg mb-6 leading-relaxed">
                   Platform lengkap tanpa biaya untuk memantau armada kendaraan,
@@ -459,7 +451,7 @@ export default function HomePage() {
                     <h3 className="text-3xl font-bold font-display text-white drop-shadow-md">
                       Onward WMS
                     </h3>
-                    <p className="text-accent-200 font-medium text-sm drop-shadow">
+                    <p className="text-primary-200 font-medium text-sm drop-shadow">
                       Warehouse Management System
                     </p>
                   </div>
@@ -474,7 +466,7 @@ export default function HomePage() {
                   pengepakan barang.
                 </p>
                 <div className="mt-auto">
-                  <span className="inline-flex items-center text-accent-600 font-bold group-hover:text-accent-700 transition-colors text-lg">
+                  <span className="inline-flex items-center text-primary-600 font-bold group-hover:text-primary-700 transition-colors text-lg">
                     Pelajari WMS Lebih Lanjut
                     <svg
                       className="w-6 h-6 ml-2 group-hover:translate-x-2 transition-transform duration-300"

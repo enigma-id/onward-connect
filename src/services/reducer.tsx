@@ -9,7 +9,7 @@ import { trackingApi } from "./tracking/api";
 
 import { formReducer } from "./form/slice";
 
-// TMS Onward - Removed WMS-specific modules (area, batch, delivery, fulfillment, item, receiving, receivingPlan, stock, stockopname, task, warehouse)
+// Onward TMS - Removed WMS-specific modules
 
 // API reducers
 const apiReducers = {

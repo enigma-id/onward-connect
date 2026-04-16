@@ -1,5 +1,5 @@
 /**
- * TMS Onward - Tracking Service Hooks
+ * Onward TMS - Tracking Service Hooks
  *
  * Custom hooks for public order tracking
  */

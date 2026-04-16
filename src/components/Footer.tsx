@@ -67,7 +67,7 @@ export default function Footer() {
                   className="text-surface-400 hover:text-primary-400 transition-colors duration-300 text-sm flex items-center group"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary-500/50 mr-3 group-hover:bg-primary-400 transition-colors" />
-                  Onward TMS
+                  Transportasi (TMS)
                 </Link>
               </li>
               <li>
@@ -76,7 +76,7 @@ export default function Footer() {
                   className="text-surface-400 hover:text-primary-400 transition-colors duration-300 text-sm flex items-center group"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary-500/50 mr-3 group-hover:bg-primary-400 transition-colors" />
-                  Onward WMS
+                  Gudang (WMS)
                 </Link>
               </li>
             </ul>
@@ -143,10 +143,6 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Onward Connect. All rights
               reserved.
             </p>
-            <div className="flex items-center space-x-2 text-surface-500 text-xs">
-              <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse" />
-              <span>Platform dalam pengembangan aktif</span>
-            </div>
           </div>
         </div>
       </div>
